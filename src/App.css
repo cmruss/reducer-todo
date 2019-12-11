@@ -110,4 +110,16 @@ button {
   background-color: firebrick;
 }
 
+.overdue {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: firebrick;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace; ;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  padding: 5px 10px;
+  border-bottom-left-radius: 5px;
+}
 
