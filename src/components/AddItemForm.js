@@ -6,12 +6,13 @@ const AddItemForm = props => {
         <form onSubmit={props.addItem}>
             <input
                 type='text'
+                className='add-item'
                 name='addItemField'
                 placeholder='add task..'
                 onChange={props.handleChange}
             />
-            <button value='submit'>add task</button>
-            <button onClick={props.clearComplete}>clear completed</button>
+            <button className='add-button' value='submit'>+</button>
+            <button className='clear-button' onClick={props.clearComplete}>-</button>
         </form>
     )
 }

@@ -29,18 +29,18 @@ const ItemList = () => {
 
 
     return(
-        
         <div className='item-list-container'>
             <AddItemForm 
                 handleChange={handleChange} 
                 addItem={addItem}
                 clearComplete={clearComplete}
             />
+        
             {itemState.map(item => (
                 <Item key={item.id} item={item} toggleComplete={toggleComplete} />
             ))}
         </div>
-    )
-}
+    );
+};
 
 export default ItemList;

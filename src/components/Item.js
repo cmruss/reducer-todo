@@ -5,9 +5,18 @@ const Item = (props) => {
 
     return (
         <div className='item'>
-            <p style={{ textDecoration: props.item.completed ? 'line-through' : 'none' }}>{props.item.item}</p>
-            <p>added {moment(props.item.id).format('dddd')}</p>
-            <input type='checkbox' onClick={()=>{props.toggleComplete(props.item.id)}}/>
+            <div className='first-line-container'>
+                <span style={{ color:'firebrick', textDecoration: props.item.completed ? 'line-through' : 'none' }}>
+                    <p style={{color:'black'}}>{props.item.item}</p>
+                </span>
+
+                <label className='checkbox-container'>
+                    <input type='checkbox' onClick={()=>{props.toggleComplete(props.item.id)}}/>
+                    <span className='checkmark'></span>
+                </label>
+            </div>
+
+            <p style={{ display: props.item.completed ? 'block' : 'none' }}>completed {moment().format('dddd')}</p>
         </div>
     )
 };
