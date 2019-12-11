@@ -29,16 +29,18 @@ const ItemList = () => {
 
 
     return(
-        <div className='item-list-container'>
+        <div className='wrapper'>
             <AddItemForm 
-                handleChange={handleChange} 
-                addItem={addItem}
-                clearComplete={clearComplete}
+            handleChange={handleChange} 
+            addItem={addItem}
+            clearComplete={clearComplete}
             />
-        
-            {itemState.map(item => (
-                <Item key={item.id} item={item} toggleComplete={toggleComplete} />
-            ))}
+            <div className='item-list-container'>
+
+                {itemState.map(item => (
+                    <Item key={item.id} item={item} toggleComplete={toggleComplete} />
+                ))}
+            </div>
         </div>
     );
 };

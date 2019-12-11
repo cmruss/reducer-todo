@@ -6,11 +6,17 @@
 
 
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
 .item-list-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  
 }
 
 .item, .add-item{
@@ -26,6 +32,10 @@
   justify-content: center;
   position: relative;
   text-align: center;
+}
+
+.add-item {
+  margin: 25px auto;
 }
 
 .add-item:focus {
@@ -92,6 +102,7 @@ button {
   color: whitesmoke;
   border: none;
   box-shadow: 5px 5px 10px black;
+  line-height: 50%;
 }
 
 .add-button {
