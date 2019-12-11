@@ -17,6 +17,7 @@ const Item = (props) => {
             </div>
 
             <p style={{ display: props.item.completed ? 'block' : 'none' }}>completed {moment().format('dddd')}</p>
+    <p style={{ color: 'firebrick', display: props.item.due < Date.now() && props.item.completed === false ? 'block' : 'none' }}>overdue </p>
         </div>
     )
 };

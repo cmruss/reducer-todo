@@ -2,7 +2,8 @@ export const initialState = [
     {
     item: 'Learn about reducers',
     completed: false,
-    id: 3892987589
+    id: 3892987589,
+    due: (3892987589 + 86400000)
     }
 ];
     
@@ -13,7 +14,9 @@ export const reducer = (state, action) => {
             const newItem = {
                 item: action.payload,
                 completed: false,
-                id: Date.now()
+                id: Date.now(),
+                due: (Date.now() + 86400000)
+
             }
             return [...state, newItem];
         case "TOGGLE_COMPLETE":
