@@ -1,3 +1,5 @@
+import { useLocalStorage } from '../hooks/useLocalStorage';
+
 export const initialState = [
     {
     item: 'Learn about reducers',

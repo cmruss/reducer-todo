@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useState} from 'react';
 import { initialState, reducer } from '../reducers/todoReducer';
 import AddItemForm from './AddItemForm';
 import Item from './Item';
@@ -7,6 +7,8 @@ const ItemList = () => {
     const [itemState, dispatch] = useReducer(reducer, initialState);
     const [newItemText, setNewItemText] = useState('');
     console.log(itemState);
+
+    
 
     const handleChange = event => {
         setNewItemText(event.target.value)
@@ -26,7 +28,6 @@ const ItemList = () => {
         e.preventDefault();
         dispatch({ type: "CLEAR_COMPLETE" })
     }
-
 
     return(
         <div className='wrapper'>
